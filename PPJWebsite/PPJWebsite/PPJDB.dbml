@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="PPJ" Class="PPJDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=USER-PC\SQLEXPRESS;Initial Catalog=PPJ;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="PPJConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.JalanTempah" Member="JalanTempahs">
+    <Type Name="JalanTempah">
+      <Column Name="NoRujukanTempah" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NoRujukanPermohonan" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="NoRujukanJalan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="JumlahTiangTempah" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TarikhMula" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="TarikhTamat" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="HargaSeunit" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Jumlah" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TarikhData" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="JalanInfo_JalanTempah" Member="JalanInfo" ThisKey="NoRujukanJalan" OtherKey="NoRujukanJalan" Type="JalanInfo" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.JalanInfo" Member="JalanInfos">
+    <Type Name="JalanInfo">
+      <Column Name="NoRujukanJalan" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NamaJalan" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="JumlahTiang" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Rosak" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Tersedia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="JumlahArm" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SaizGegantung" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="HargaKosSeunit" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="HargaSeunit" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Aktif" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="TarikhData" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="JalanInfo_JalanTempah" Member="JalanTempahs" ThisKey="NoRujukanJalan" OtherKey="NoRujukanJalan" Type="JalanTempah" />
+    </Type>
+  </Table>
+</Database>

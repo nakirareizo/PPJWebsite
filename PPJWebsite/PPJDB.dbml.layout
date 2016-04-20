@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="PPJDB">
+  <DataContextMoniker Name="/PPJDBDataContext" />
+  <nestedChildShapes>
+    <classShape Id="906c4424-b564-4c69-ad48-ac4b14e7247e" absoluteBounds="0.75, 1, 2, 2.9247054036458326">
+      <DataClassMoniker Name="/PPJDBDataContext/JalanInfo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="119ae7c7-dc99-4978-802a-3e578f8c1baa" absoluteBounds="0.765, 1.46, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="576c7d5e-67e3-4657-9f53-429a88c4ed16" absoluteBounds="3.5, 1.125, 2, 2.5401025390625005">
+      <DataClassMoniker Name="/PPJDBDataContext/JalanTempah" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c608b403-4477-46db-a505-df3414cd6131" absoluteBounds="3.515, 1.585, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 2.39505126953125); (3.5 : 2.39505126953125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PPJDBDataContext/JalanInfo/JalanInfo_JalanTempah" />
+      <nodes>
+        <classShapeMoniker Id="906c4424-b564-4c69-ad48-ac4b14e7247e" />
+        <classShapeMoniker Id="576c7d5e-67e3-4657-9f53-429a88c4ed16" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
